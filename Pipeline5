@@ -53,7 +53,7 @@ pipeline {
             echo "Doing Static Analysis"
             sh 'id'
             sh 'ls -la'
-            //sh 'pip install flake8'
+            sh 'pip install flake8'
             sh returnStatus: true, script: 'flake8 main/ utests/ > flake8out.text'
           }
           post {
